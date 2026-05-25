@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Mi sistema TDAH">
 <meta name="theme-color" content="#534AB7">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23534AB7'/%3E%3Ctext y='62' x='50' text-anchor='middle' font-size='58' font-family='serif'%3E&#129504;%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23534AB7'/%3E%3Ctext y='62' x='50' text-anchor='middle' font-size='58' font-family='serif'%3E🧠%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
 <style>
 :root{--p:#534AB7;--pb:#EEEDFE;--pd:#3C3489;--t:#0F6E56;--tb:#E1F5EE;--a:#854F0B;--ab:#FAEEDA;--g:#3B6D11;--gb:#EAF3DE;--c:#993C1D;--cb:#FAECE7;--cm:#D85A30;--bg:#FAFAF8;--bg2:#F2F1ED;--bg3:#E8E7E2;--tx:#1A1A18;--tx2:#6B6A65;--tx3:#9E9D99;--bd:rgba(0,0,0,0.08);--bd2:rgba(0,0,0,0.14);--r:10px;--rl:14px;--f:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif}
@@ -21,7 +21,7 @@ body{font-family:var(--f);background:var(--bg);color:var(--tx);min-height:100vh;
 .nb.on{background:var(--tx);color:#fff;border-color:var(--tx);font-weight:500}
 .view{display:none}.view.on{display:block;animation:fi .2s ease}
 @keyframes fi{from{opacity:0;transform:translateY(3px)}to{opacity:1;transform:translateY(0)}}
-.card{background:#fff;border:0.5px solid var(--bd);border-radius:var(--rl);padding:1rem 1.25rem;margin-bottom:.75rem;box-shadow:0 1px 4px rgba(0,0,0,0.05)}
+.card{background:#fff;border:0.5px solid var(--bd);border-radius:var(--rl);padding:1rem 1.25rem;margin-bottom:.75rem;box-shadow:0 1px 4px rgba(0,0,0,.05)}
 .una{background:var(--pb);border-radius:var(--r);padding:.875rem 1rem;margin-bottom:.875rem}
 .una label{font-size:11px;font-weight:500;color:var(--p);display:block;margin-bottom:4px}
 .una input{width:100%;font-size:14px;font-weight:500;background:transparent;border:none;outline:none;color:var(--pd);font-family:var(--f)}
@@ -45,8 +45,7 @@ body{font-family:var(--f);background:var(--bg);color:var(--tx);min-height:100vh;
 .hrck{font-size:10px;font-weight:500;margin-top:2px}
 .cbox{background:var(--bg2);border-radius:var(--rl);padding:.875rem 1rem;margin-top:.875rem}
 .pi{display:flex;align-items:flex-start;gap:10px;padding:9px 11px;border-radius:var(--r);margin-bottom:5px;cursor:pointer;transition:all .15s;border:0.5px solid var(--bd);background:#fff}
-.pi:hover{background:var(--bg2)}
-.pi.done{opacity:.55}.pi.done .ptxt{text-decoration:line-through;color:var(--tx3)}
+.pi:hover{background:var(--bg2)}.pi.done{opacity:.55}.pi.done .ptxt{text-decoration:line-through;color:var(--tx3)}
 .pcb{width:20px;height:20px;border-radius:5px;border:1.5px solid var(--bd2);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s}.pcb.chk{border-color:transparent}
 .ptxt{font-size:13px;color:var(--tx);flex:1;line-height:1.4}
 .psub2{font-size:11px;color:var(--tx2);margin-top:1px}
@@ -60,19 +59,12 @@ body{font-family:var(--f);background:var(--bg);color:var(--tx);min-height:100vh;
 .tl{font-size:9px;color:var(--tx3);text-align:right;padding:3px 4px 0 0;line-height:1.2}
 .bl{border-radius:4px;padding:3px 4px;font-size:9px;font-weight:500;line-height:1.2;min-height:28px;display:flex;flex-direction:column;justify-content:center;border:none;text-align:left;width:100%;cursor:pointer;transition:all .15s;font-family:var(--f)}
 .bl:hover{filter:brightness(.92)}
-.bl.inmo{background:var(--pb);color:var(--pd)}
-.bl.viajes{background:var(--tb);color:#085041}
-.bl.curso{background:var(--ab);color:#633806}
-.bl.ejercicio{background:var(--cb);color:#712B13}
-.bl.hogar{background:var(--gb);color:#27500A}
-.bl.descanso,.bl.personal{background:var(--bg2);color:var(--tx2);border:0.5px solid var(--bd)}
-.bl.empty{background:transparent;border:none;cursor:default}
+.bl.inmo{background:var(--pb);color:var(--pd)}.bl.viajes{background:var(--tb);color:#085041}.bl.curso{background:var(--ab);color:#633806}.bl.ejercicio{background:var(--cb);color:#712B13}.bl.hogar{background:var(--gb);color:#27500A}.bl.descanso,.bl.personal{background:var(--bg2);color:var(--tx2);border:0.5px solid var(--bd)}.bl.empty{background:transparent;border:none;cursor:default}
 .zona{font-size:8px;opacity:.6;margin-top:1px}
 .tipbox{background:var(--bg2);border-radius:var(--r);padding:9px 12px;font-size:12px;color:var(--tx2);line-height:1.5;margin-bottom:.75rem;border:0.5px solid var(--bd)}
 .tipbox strong{color:var(--tx);font-weight:500}
 .legend{display:flex;flex-wrap:wrap;gap:6px;padding:.25rem 0 .75rem}
-.li{display:flex;align-items:center;gap:4px;font-size:11px;color:var(--tx2)}
-.ld{width:9px;height:9px;border-radius:2px}
+.li{display:flex;align-items:center;gap:4px;font-size:11px;color:var(--tx2)}.ld{width:9px;height:9px;border-radius:2px}
 .abox2{background:var(--tb);border-radius:var(--rl);padding:.875rem 1rem;margin-bottom:.875rem;border:0.5px solid #9FE1CB}
 .rbtn{display:inline-flex;align-items:center;gap:5px;font-size:12px;padding:6px 14px;border-radius:13px;border:0.5px solid #1D9E75;background:#fff;color:var(--t);cursor:pointer;margin-top:.625rem;font-family:var(--f);font-weight:500}
 .ractive{background:var(--ab);border-radius:var(--r);padding:.75rem 1rem;margin-top:.625rem;font-size:13px;font-weight:500;color:var(--a);text-align:center;display:none}
@@ -80,33 +72,23 @@ body{font-family:var(--f);background:var(--bg);color:var(--tx);min-height:100vh;
 @keyframes pba{0%,100%{transform:scale(1);opacity:.8}50%{transform:scale(1.02);opacity:1}}
 .tc{display:flex;gap:11px;align-items:flex-start;padding:10px 0;border-bottom:0.5px solid var(--bd)}.tc:last-child{border:none}
 .tci{width:34px;height:34px;border-radius:var(--r);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:17px}
-.tct{font-size:13px;font-weight:500;color:var(--tx);margin-bottom:3px}
-.tcd{font-size:12px;color:var(--tx2);line-height:1.5}
+.tct{font-size:13px;font-weight:500;color:var(--tx);margin-bottom:3px}.tcd{font-size:12px;color:var(--tx2);line-height:1.5}
 .mot{border-radius:var(--rl);padding:1rem 1.25rem;margin-bottom:1rem;text-align:center;border:0.5px solid var(--bd)}
 .evo-grid{display:grid;grid-template-columns:repeat(8,1fr);gap:4px;margin-bottom:1rem}
 .ecol{display:flex;flex-direction:column;align-items:center;gap:3px}
-.ebar-w{width:100%;height:80px;background:var(--bg3);border-radius:5px;overflow:hidden;display:flex;align-items:flex-end}
-.ebar-f{width:100%;border-radius:5px;transition:height .6s}
-.ecol.fut .ebar-w{opacity:.25}
-.elbl{font-size:9px;color:var(--tx3);text-align:center}
-.epct{font-size:9px;font-weight:500;text-align:center}
+.ebar-w{width:100%;height:80px;background:var(--bg3);border-radius:5px;overflow:hidden;display:flex;align-items:flex-end}.ebar-f{width:100%;border-radius:5px;transition:height .6s}.ecol.fut .ebar-w{opacity:.25}
+.elbl{font-size:9px;color:var(--tx3);text-align:center}.epct{font-size:9px;font-weight:500;text-align:center}
 .mes-tabs{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:.875rem}
-.mtab{font-size:12px;padding:5px 12px;border-radius:11px;border:0.5px solid var(--bd2);background:transparent;color:var(--tx2);cursor:pointer;font-family:var(--f);transition:all .15s;font-weight:500}
-.mtab.on{background:var(--p);color:#fff;border-color:var(--p)}
+.mtab{font-size:12px;padding:5px 12px;border-radius:11px;border:0.5px solid var(--bd2);background:transparent;color:var(--tx2);cursor:pointer;font-family:var(--f);transition:all .15s;font-weight:500}.mtab.on{background:var(--p);color:#fff;border-color:var(--p)}
 .sgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin-bottom:1rem}
-.sc{background:#fff;border-radius:var(--rl);padding:.875rem 1rem;border:0.5px solid var(--bd);text-align:center;box-shadow:0 1px 3px rgba(0,0,0,0.04)}
-.sn{font-size:28px;font-weight:500;line-height:1}
-.sl{font-size:12px;color:var(--tx2);margin-top:3px;font-weight:500}
-.ss{font-size:11px;color:var(--tx3);margin-top:2px}
-.sb2{height:4px;background:var(--bg3);border-radius:5px;margin-top:8px;overflow:hidden}
-.sf2{height:100%;border-radius:5px;transition:width .6s}
+.sc{background:#fff;border-radius:var(--rl);padding:.875rem 1rem;border:0.5px solid var(--bd);text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.sn{font-size:28px;font-weight:500;line-height:1}.sl{font-size:12px;color:var(--tx2);margin-top:3px;font-weight:500}.ss{font-size:11px;color:var(--tx3);margin-top:2px}
+.sb2{height:4px;background:var(--bg3);border-radius:5px;margin-top:8px;overflow:hidden}.sf2{height:100%;border-radius:5px;transition:width .6s}
 .arow{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:0.5px solid var(--bd)}.arow:last-child{border:none}
 .aname{font-size:13px;color:var(--tx);width:120px;flex-shrink:0;display:flex;align-items:center;gap:6px;font-weight:500}
-.abw{flex:1;height:10px;background:var(--bg3);border-radius:6px;overflow:hidden}
-.abf{height:100%;border-radius:6px;transition:width .6s}
+.abw{flex:1;height:10px;background:var(--bg3);border-radius:6px;overflow:hidden}.abf{height:100%;border-radius:6px;transition:width .6s}
 .apct{font-size:12px;font-weight:500;width:34px;text-align:right;flex-shrink:0}
-.si{font-size:11px;color:var(--t);opacity:0;transition:opacity .3s;display:inline-flex;align-items:center;gap:3px;font-weight:500}
-.si.show{opacity:1}
+.si{font-size:11px;color:var(--t);opacity:0;transition:opacity .3s;display:inline-flex;align-items:center;gap:3px;font-weight:500}.si.show{opacity:1}
 .slbl{font-size:12px;font-weight:500;color:var(--tx2);margin-bottom:6px;display:flex;align-items:center;justify-content:space-between}
 .cbadge{font-size:10px;padding:2px 8px;border-radius:9px;background:var(--bg2);color:var(--tx2);font-weight:500}
 </style>
@@ -115,15 +97,14 @@ body{font-family:var(--f);background:var(--bg);color:var(--tx);min-height:100vh;
 <div class="wrap">
 <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:0.5px solid var(--bd)">
   <div>
-    <div style="font-family:Georgia,serif;font-size:22px;color:var(--tx)">Mi sistema de vida &#129504;&#129977;</div>
-    <div style="font-size:12px;color:var(--tx2);margin-top:2px">Llanes, Asturias &middot; todo se guarda solo</div>
+    <div style="font-size:22px;font-weight:500;color:var(--tx)">Mi sistema de vida 🧠🩷</div>
+    <div style="font-size:12px;color:var(--tx2);margin-top:2px">Llanes, Asturias · todo se guarda solo</div>
   </div>
   <div style="display:flex;align-items:center;gap:10px">
     <span class="si" id="si"><i class="ti ti-check"></i> guardado</span>
-    <div style="width:40px;height:40px;border-radius:12px;background:var(--pb);display:flex;align-items:center;justify-content:center;font-size:20px">&#129504;</div>
+    <div style="width:40px;height:40px;border-radius:12px;background:var(--pb);display:flex;align-items:center;justify-content:center;font-size:20px">🧠</div>
   </div>
 </div>
-
 <nav class="nav">
   <button class="nb on" onclick="sv('hoy')" id="nb-hoy"><i class="ti ti-sun"></i>Hoy</button>
   <button class="nb" onclick="sv('semana')" id="nb-semana"><i class="ti ti-calendar"></i>Semana</button>
@@ -132,14 +113,12 @@ body{font-family:var(--f);background:var(--bg);color:var(--tx);min-height:100vh;
   <button class="nb" onclick="sv('progreso')" id="nb-progreso"><i class="ti ti-trending-up"></i>Mi progreso</button>
   <button class="nb" onclick="sv('premios')" id="nb-premios"><i class="ti ti-trophy"></i>Premios 2026</button>
 </nav>
-
-<!-- HOY -->
 <div id="view-hoy" class="view on">
   <div class="card">
     <div style="font-size:22px;font-weight:500;color:var(--tx)" id="fecha"></div>
     <div style="font-size:12px;color:var(--tx2);margin-top:2px" id="saludo"></div>
     <div style="display:flex;align-items:center;gap:8px;margin:.875rem 0;flex-wrap:wrap">
-      <span style="font-size:12px;color:var(--tx2);font-weight:500"><i class="ti ti-bolt" style="font-size:13px;vertical-align:-2px"></i> Energ&iacute;a:</span>
+      <span style="font-size:12px;color:var(--tx2);font-weight:500"><i class="ti ti-bolt" style="font-size:13px;vertical-align:-2px"></i> Energia:</span>
       <button class="nb" id="e-alta" onclick="setE('alta')" style="border-radius:12px;padding:5px 12px;font-size:12px">Alta</button>
       <button class="nb on" id="e-media" onclick="setE('media')" style="border-radius:12px;padding:5px 12px;font-size:12px">Media</button>
       <button class="nb" id="e-baja" onclick="setE('baja')" style="border-radius:12px;padding:5px 12px;font-size:12px">Baja</button>
@@ -148,49 +127,47 @@ body{font-family:var(--f);background:var(--bg);color:var(--tx);min-height:100vh;
   </div>
   <div id="wkview" style="display:none">
     <div style="background:#E1F5EE;border-radius:var(--rl);padding:1.25rem;margin-bottom:.875rem;border:0.5px solid #9FE1CB;text-align:center">
-      <div style="font-size:34px;margin-bottom:.5rem">&#127807;</div>
-      <div style="font-size:16px;font-weight:500;color:#085041;margin-bottom:.375rem">&#161;Hoy es tu d&iacute;a!</div>
-      <div style="font-size:13px;color:#0F6E56;line-height:1.6">El fin de semana es para recargar, no para rendir cuentas.<br>Sin tareas, sin progreso, sin culpa.</div>
+      <div style="font-size:32px;margin-bottom:.5rem">🌿</div>
+      <div style="font-size:15px;font-weight:500;color:#085041;margin-bottom:.375rem">Hoy es tu dia 🎉</div>
+      <div style="font-size:12px;color:#0F6E56;line-height:1.6">El fin de semana es para recargar, no para rendir cuentas.<br>Sin tareas, sin progreso, sin culpa.</div>
     </div>
-    <div style="font-size:13px;font-weight:500;color:var(--tx);margin-bottom:.625rem">Para hoy &#127968;</div>
+    <div style="font-size:13px;font-weight:500;color:var(--tx);margin-bottom:.625rem">Para hoy 🏠</div>
     <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:1rem">
-      <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;background:#fff;border-radius:var(--r);border:0.5px solid var(--bd)"><span style="font-size:20px">&#127939;&#65039;</span><span style="font-size:13px">Ejercicio suave o paseo por Llanes</span></div>
-      <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;background:#fff;border-radius:var(--r);border:0.5px solid var(--bd)"><span style="font-size:20px">&#127968;</span><span style="font-size:13px" id="wktask">Limpieza del hogar y men&uacute; semanal</span></div>
-      <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;background:#fff;border-radius:var(--r);border:0.5px solid var(--bd)"><span style="font-size:20px">&#128155;</span><span style="font-size:13px">Tiempo para ti &mdash; lo que te recargue</span></div>
-      <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;background:#FAEEDA;border-radius:var(--r);border:0.5px solid #EF9F27"><span style="font-size:20px">&#128276;</span><span style="font-size:13px;color:#854F0B">Si hay urgencia de un cliente, at&iacute;endela y vuelve al descanso</span></div>
+      <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;background:#fff;border-radius:var(--r);border:0.5px solid var(--bd)"><span style="font-size:20px">🏃</span><span style="font-size:13px">Ejercicio suave o paseo por Llanes</span></div>
+      <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;background:#fff;border-radius:var(--r);border:0.5px solid var(--bd)"><span style="font-size:20px">🏠</span><span style="font-size:13px" id="wktask">Limpieza del hogar y menu semanal</span></div>
+      <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;background:#fff;border-radius:var(--r);border:0.5px solid var(--bd)"><span style="font-size:20px">💜</span><span style="font-size:13px">Tiempo para ti - lo que te recargue</span></div>
+      <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;background:#FAEEDA;border-radius:var(--r);border:0.5px solid #EF9F27"><span style="font-size:20px">🔔</span><span style="font-size:13px;color:#854F0B">Si hay urgencia de un cliente, atiendela y vuelve al descanso</span></div>
     </div>
     <div class="hrbox">
-      <div style="font-size:13px;font-weight:500;display:flex;align-items:center;gap:6px"><i class="ti ti-zap" style="color:#854F0B"></i>H&aacute;bitos del fin de semana</div>
+      <div style="font-size:13px;font-weight:500;display:flex;align-items:center;gap:6px"><i class="ti ti-zap" style="color:#854F0B"></i>Habitos del fin de semana</div>
       <div class="hrgrid" id="hrgrid-wk"></div>
     </div>
   </div>
   <div id="wdview">
     <div class="una">
-      <label><i class="ti ti-star" style="font-size:12px;vertical-align:-1px"></i> Mi UNA tarea m&aacute;s importante hoy</label>
-      <input type="text" id="una" placeholder="Escr&iacute;bela antes de abrir el email...">
+      <label><i class="ti ti-star" style="font-size:12px;vertical-align:-1px"></i> Mi UNA tarea mas importante hoy</label>
+      <input type="text" id="una" placeholder="Escribela antes de abrir el email...">
     </div>
     <div style="margin-bottom:.875rem">
       <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px">
-        <span style="font-size:13px;font-weight:500">Progreso del d&iacute;a</span>
+        <span style="font-size:13px;font-weight:500">Progreso del dia</span>
         <span style="font-size:22px;font-weight:500;color:var(--p)" id="pct">0%</span>
       </div>
       <div class="pbar"><div class="pfill" id="pfill" style="width:0%;background:var(--p)"></div></div>
-      <div style="font-size:12px;color:var(--tx2);margin-top:5px;font-style:italic" id="pmsg">Elige tu tarea principal y empieza cuando est&eacute;s lista.</div>
+      <div style="font-size:12px;color:var(--tx2);margin-top:5px;font-style:italic" id="pmsg">Elige tu tarea principal y empieza cuando estes lista.</div>
     </div>
     <div class="slbl">Tareas de hoy <span class="cbadge" id="dcnt">0/6</span></div>
     <div id="tasklist"></div>
     <div class="hrbox">
-      <div style="font-size:13px;font-weight:500;display:flex;align-items:center;gap:6px"><i class="ti ti-zap" style="color:#854F0B"></i>H&aacute;bitos del d&iacute;a &mdash; toca para marcar</div>
+      <div style="font-size:13px;font-weight:500;display:flex;align-items:center;gap:6px"><i class="ti ti-zap" style="color:#854F0B"></i>Habitos del dia - toca para marcar ⚡</div>
       <div class="hrgrid" id="hrgrid-wd"></div>
     </div>
     <div class="cbox">
-      <div style="font-size:13px;font-weight:500;margin-bottom:.625rem;display:flex;align-items:center;gap:6px"><i class="ti ti-moon" style="color:var(--p)"></i>Ritual de cierre &mdash; 19:00h</div>
+      <div style="font-size:13px;font-weight:500;margin-bottom:.625rem;display:flex;align-items:center;gap:6px"><i class="ti ti-moon" style="color:var(--p)"></i>Ritual de cierre - 19:00h 🌙</div>
       <div id="cierre"></div>
     </div>
   </div>
 </div>
-
-<!-- SEMANA -->
 <div id="view-semana" class="view">
   <div class="legend">
     <div class="li"><div class="ld" style="background:#7F77DD"></div>Inmobiliaria</div>
@@ -203,92 +180,74 @@ body{font-family:var(--f);background:var(--bg);color:var(--tx);min-height:100vh;
   <div class="wgrid" id="wgrid"></div>
   <div class="tipbox" id="tipbox">Toca un bloque para ver el consejo.</div>
 </div>
-
-<!-- PRIORIDADES -->
 <div id="view-prioridades" class="view">
-  <div style="background:var(--pb);border-radius:var(--r);padding:.75rem 1rem;margin-bottom:1rem;font-size:12px;color:var(--p)">
-    <strong>Marca lo que completes cada d&iacute;a</strong> &mdash; alimenta autom&aacute;ticamente &quot;Mi progreso&quot;
-  </div>
+  <div style="background:var(--pb);border-radius:var(--r);padding:.75rem 1rem;margin-bottom:1rem;font-size:12px;color:var(--p)"><strong>Marca lo que completes cada dia</strong> - alimenta automaticamente Mi progreso ✅</div>
   <div id="prisec"></div>
 </div>
-
-<!-- TDAH -->
 <div id="view-tdah" class="view">
   <div class="abox2">
-    <div style="font-size:13px;font-weight:500;color:#085041;margin-bottom:.375rem;display:flex;align-items:center;gap:6px"><i class="ti ti-heart"></i>Para la ansiedad &mdash; respira primero</div>
-    <div style="font-size:12px;color:#0F6E56;line-height:1.65">Cuando sientas que todo se amontona: para, 4 respiraciones profundas, escribe en papel lo que te preocupa, elige UNA cosa. El resto puede esperar. Tu cerebro no puede con todo &mdash; y no tiene que poder.</div>
-    <button class="rbtn" onclick="startBreath()"><i class="ti ti-player-play" style="font-size:13px"></i>Gu&iacute;a respiraci&oacute;n 4-4-4</button>
+    <div style="font-size:13px;font-weight:500;color:#085041;margin-bottom:.375rem;display:flex;align-items:center;gap:6px"><i class="ti ti-heart"></i>Para la ansiedad - respira primero 💚</div>
+    <div style="font-size:12px;color:#0F6E56;line-height:1.65">Cuando sientas que todo se amontona: para, 4 respiraciones profundas, escribe en papel lo que te preocupa, elige UNA cosa. El resto puede esperar. Tu cerebro no puede con todo - y no tiene que poder.</div>
+    <button class="rbtn" onclick="startBreath()"><i class="ti ti-player-play" style="font-size:13px"></i>Guia respiracion 4-4-4</button>
     <div class="ractive" id="breathbox"></div>
   </div>
   <div id="tdahcards"></div>
 </div>
-
-<!-- PROGRESO -->
 <div id="view-progreso" class="view">
-  <div class="mot" id="motbox"><div style="font-size:28px">&#127807;</div><div style="font-size:14px;font-weight:500;margin-top:.25rem">Cargando tu progreso...</div></div>
-  <div style="font-size:13px;font-weight:500;margin-bottom:.625rem">Mayo &rarr; Diciembre 2026</div>
+  <div class="mot" id="motbox"><div style="font-size:28px">🌱</div><div style="font-size:14px;font-weight:500;margin-top:.25rem">Cargando tu progreso...</div></div>
+  <div style="font-size:13px;font-weight:500;margin-bottom:.625rem">Mayo a Diciembre 2026 📈</div>
   <div class="evo-grid" id="evogrid"></div>
   <div style="font-size:13px;font-weight:500;margin-bottom:.625rem;margin-top:.5rem">Este mes en detalle</div>
   <div class="mes-tabs" id="mestabs"></div>
   <div class="sgrid" id="sgrid"></div>
-  <div style="font-size:13px;font-weight:500;margin-bottom:.625rem">Por &aacute;rea de trabajo</div>
+  <div style="font-size:13px;font-weight:500;margin-bottom:.625rem">Por area de trabajo</div>
   <div class="card" id="areabars"></div>
 </div>
-
-<!-- PREMIOS -->
 <div id="view-premios" class="view">
   <div style="text-align:center;margin-bottom:1.5rem">
-    <div style="font-size:36px">&#127942;</div>
-    <div style="font-size:20px;font-weight:500;color:var(--tx);margin-top:.375rem">Tu a&ntilde;o en medallas</div>
-    <div style="font-size:12px;color:var(--tx2);margin-top:3px">Mayo &mdash; Diciembre 2026 &middot; Solo d&iacute;as laborables</div>
+    <div style="font-size:36px">🏆</div>
+    <div style="font-size:20px;font-weight:500;color:var(--tx);margin-top:.375rem">Tu ano en medallas</div>
+    <div style="font-size:12px;color:var(--tx2);margin-top:3px">Mayo - Diciembre 2026 · Solo dias laborables</div>
   </div>
   <div id="premios-content"><div style="text-align:center;padding:2rem;color:var(--tx3);font-size:13px">Cargando tus logros...</div></div>
 </div>
-
-<div style="text-align:center;font-size:11px;color:var(--tx3);margin-top:2rem;padding-top:1rem;border-top:0.5px solid var(--bd)">
-  Hecho con cari&ntilde;o para tu cerebro brillante &#129504;&#129977;
-</div>
+<div style="text-align:center;font-size:11px;color:var(--tx3);margin-top:2rem;padding-top:1rem;border-top:0.5px solid var(--bd)">Hecho con carino para tu cerebro brillante 🧠🩷</div>
 </div>
 <script>
 var MESES=["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
-var DIAS=["domingo","lunes","martes","mi\u00e9rcoles","jueves","viernes","s\u00e1bado"];
+var DIAS=["domingo","lunes","martes","miercoles","jueves","viernes","sabado"];
 var now=new Date(),CY=now.getFullYear(),CM=now.getMonth();
 var TODAY=now.toISOString().slice(0,10);
 var TRACK=[4,5,6,7,8,9,10,11];
 var IS_WK=(now.getDay()===0||now.getDay()===6);
-
 document.getElementById('fecha').textContent=DIAS[now.getDay()]+" "+now.getDate()+" de "+MESES[CM].toLowerCase()+" de "+CY;
 var hh=now.getHours();
-document.getElementById('saludo').textContent=hh<12?"Buenos d\u00edas \u2014 empieza con ejercicio":hh<14?"Mediod\u00eda \u2014 bloque Lima en 2h":hh<18?"Bloque Lima activo \u2014 inmobiliaria primero":"Tarde \u2014 cierra bien el d\u00eda a las 19h";
-
+document.getElementById('saludo').textContent=hh<12?"Buenos dias - empieza con ejercicio":hh<14?"Mediodia - bloque Lima en 2h":hh<18?"Bloque Lima activo - inmobiliaria primero":"Tarde - cierra bien el dia a las 19h";
 var dbR=null;
-function openDB(){return new Promise(function(res,rej){if(dbR){res(dbR);return;}var r=indexedDB.open('tdah_v5',1);r.onupgradeneeded=function(e){e.target.result.createObjectStore('kv');};r.onsuccess=function(e){dbR=e.target.result;res(dbR);};r.onerror=function(){rej();};});}
+function openDB(){return new Promise(function(res,rej){if(dbR){res(dbR);return;}var r=indexedDB.open('tdah_v6',1);r.onupgradeneeded=function(e){e.target.result.createObjectStore('kv');};r.onsuccess=function(e){dbR=e.target.result;res(dbR);};r.onerror=function(){rej();};});}
 function iSet(k,v){return openDB().then(function(d){return new Promise(function(res,rej){var tx=d.transaction('kv','readwrite');tx.objectStore('kv').put(v,k).onsuccess=res;tx.onerror=rej;});}).catch(function(){});}
 function iGet(k){return openDB().then(function(d){return new Promise(function(res,rej){var tx=d.transaction('kv','readonly');var r=tx.objectStore('kv').get(k);r.onsuccess=function(){res(r.result);};r.onerror=rej;});}).catch(function(){return null;});}
 function showSaved(){var el=document.getElementById('si');el.classList.add('show');setTimeout(function(){el.classList.remove('show');},1500);}
 function save(k,v){var s=JSON.stringify(v);iSet(k,s);try{localStorage.setItem(k,s);}catch(e){}showSaved();}
 function load(k,def){return iGet(k).then(function(v){if(!v)try{v=localStorage.getItem(k);}catch(e){}try{return v?JSON.parse(v):def;}catch(e){return def;}}).catch(function(){try{var v=localStorage.getItem(k);return v?JSON.parse(v):def;}catch(e){return def;}});}
-
-var eTips={alta:"Alta energ\u00eda \u2014 inmobiliaria directamente a las 14:00",media:"Energ\u00eda media \u2014 empieza con Namaste para calentar",baja:"Energ\u00eda baja \u2014 1 tarea peque\u00f1a, sin presi\u00f3n ni culpa"};
+var eTips={alta:"Alta energia - inmobiliaria directamente a las 14:00",media:"Energia media - empieza con Namaste para calentar",baja:"Energia baja - 1 tarea pequena, sin presion ni culpa"};
 function setE(n){['alta','media','baja'].forEach(function(x){var b=document.getElementById('e-'+x);b.className='nb';b.style.cssText='border-radius:12px;padding:5px 12px;font-size:12px';});document.getElementById('e-'+n).className='nb on';document.getElementById('e-'+n).style.cssText='border-radius:12px;padding:5px 12px;font-size:12px';document.getElementById('etip').textContent=eTips[n];save(TODAY+'_e',n);}
 load(TODAY+'_e','media').then(function(v){setE(v);});
 var unaEl=document.getElementById('una');
 if(unaEl){load(TODAY+'_una','').then(function(v){if(v)unaEl.value=v;});unaEl.addEventListener('input',function(){save(TODAY+'_una',unaEl.value);});}
-
 var TDEF=[
   {text:"Contestar correos y mensajes de clientes Lima",tag:"Inmobiliaria",tc:"#534AB7",tb:"#EEEDFE",pri:"alta",cat:"inmo"},
-  {text:"Actualizar y ajustar info de 1\u20132 propiedades",tag:"Inmobiliaria",tc:"#534AB7",tb:"#EEEDFE",pri:"alta",cat:"inmo"},
-  {text:"1 contenido para Namaste (post, reel o idea)",tag:"Namaste",tc:"#0F6E56",tb:"#E1F5EE",pri:"media",cat:"namaste"},
-  {text:"Curso trafficker \u2014 lecci\u00f3n ma\u00f1ana (11:30h)",tag:"Curso",tc:"#854F0B",tb:"#FAEEDA",pri:"media",cat:"curso"},
+  {text:"Actualizar info de 1-2 propiedades",tag:"Inmobiliaria",tc:"#534AB7",tb:"#EEEDFE",pri:"alta",cat:"inmo"},
+  {text:"Contenido para Namaste (post, reel o idea) 🌍",tag:"Namaste",tc:"#0F6E56",tb:"#E1F5EE",pri:"media",cat:"namaste"},
+  {text:"Curso trafficker - leccion manana 11:30h 📚",tag:"Curso",tc:"#854F0B",tb:"#FAEEDA",pri:"media",cat:"curso"},
   {text:"Publicar 1 propiedad en redes sociales",tag:"Inmobiliaria",tc:"#534AB7",tb:"#EEEDFE",pri:"media",cat:"inmo"},
-  {text:"Curso trafficker \u2014 lecci\u00f3n tarde (18:15h)",tag:"Curso",tc:"#854F0B",tb:"#FAEEDA",pri:"baja",cat:"curso"},
+  {text:"Curso trafficker - leccion tarde 18:15h 📚",tag:"Curso",tc:"#854F0B",tb:"#FAEEDA",pri:"baja",cat:"curso"},
 ];
 var PC={alta:"#E24B4A",media:"#EF9F27",baja:"#639922"};
-var PM=["Elige tu tarea principal y empieza cuando est\u00e9s lista.","Buen comienzo. Un paso a la vez.","Vas bien. Sin prisa, sin pausa.","Mitad del camino. \u00a1Lo est\u00e1s haciendo incre\u00edble!","Casi. Cada tarea cuenta.","Un poco m\u00e1s \u2014 lo est\u00e1s logrando.","D\u00eda completado. Eres imparable! \ud83c\udfc6"];
+var PM=["Elige tu tarea principal y empieza cuando estes lista.","Buen comienzo. Un paso a la vez. 💪","Vas bien. Sin prisa, sin pausa.","Mitad del camino. Lo estas haciendo increible! ⚡","Casi. Cada tarea cuenta.","Un poco mas - lo estas logrando. 🌟","Dia completado. Eres imparable! 🏆"];
 var tasks=TDEF.map(function(t){return Object.assign({},t,{done:false});});
-
 function initTasks(){
-  if(IS_WK){document.getElementById('wkview').style.display='block';document.getElementById('wdview').style.display='none';if(now.getDay()===0){var el=document.getElementById('wktask');if(el)el.textContent='Paseo por Llanes y tiempo libre total';}return;}
+  if(IS_WK){document.getElementById('wkview').style.display='block';document.getElementById('wdview').style.display='none';if(now.getDay()===0){var el=document.getElementById('wktask');if(el)el.textContent='Paseo por Llanes y tiempo libre total 🌊';}return;}
   document.getElementById('wkview').style.display='none';document.getElementById('wdview').style.display='block';
   load(TODAY+'_tasks',null).then(function(s){if(s&&s.length===tasks.length)tasks=tasks.map(function(t,i){return Object.assign({},t,{done:s[i]});});renderTasks();updProg();});
 }
@@ -302,12 +261,7 @@ function renderTasks(){
   });
 }
 function updProg(){var dn=tasks.filter(function(t){return t.done;}).length;var pct=Math.round(dn/tasks.length*100);document.getElementById('pfill').style.width=pct+'%';document.getElementById('pct').textContent=pct+'%';document.getElementById('dcnt').textContent=dn+'/'+tasks.length;document.getElementById('pmsg').textContent=PM[dn]||PM[PM.length-1];document.getElementById('pfill').style.background=pct===100?'#1D9E75':'#534AB7';}
-
-var HRAP=[
-  {key:"ejercicio",label:"Ejercicio",emoji:"\ud83c\udfc3\u200d\u2640\ufe0f",color:"#D85A30",bg:"#FAECE7"},
-  {key:"orden",label:"Orden hogar",emoji:"\ud83c\udfe0",color:"#3B6D11",bg:"#EAF3DE"},
-  {key:"pausa",label:"Sin pantallas",emoji:"\ud83c\udf3f",color:"#0F6E56",bg:"#E1F5EE"}
-];
+var HRAP=[{key:"ejercicio",label:"Ejercicio 🏃",color:"#D85A30",bg:"#FAECE7"},{key:"orden",label:"Orden hogar 🏠",color:"#3B6D11",bg:"#EAF3DE"},{key:"pausa",label:"Sin pantallas 🌿",color:"#0F6E56",bg:"#E1F5EE"}];
 var habs={};
 function initHabs(){load(TODAY+'_hab',{}).then(function(v){habs=v;renderHabs();});}
 function renderHabs(){
@@ -317,12 +271,11 @@ function renderHabs(){
     var done=habs[h.key]||false;
     var btn=document.createElement('button');btn.className='hrbtn'+(done?' done':'');
     btn.style.background=done?h.bg:'#fff';btn.style.borderColor=done?h.color:'var(--bd2)';
-    btn.innerHTML='<div class="hricon">'+h.emoji+'</div><div class="hrlbl">'+h.label+'</div><div class="hrck" style="color:'+(done?h.color:'var(--tx3)')+'">'+( done?'\u2713 hecho':'toca para marcar')+'</div>';
+    btn.innerHTML='<div class="hrlbl" style="font-size:13px;margin-top:4px">'+h.label+'</div><div class="hrck" style="color:'+(done?h.color:'var(--tx3)')+'">'+( done?'✓ hecho':'toca para marcar')+'</div>';
     btn.onclick=function(){habs[h.key]=!done;save(TODAY+'_hab',habs);saveDayStats();renderHabs();};
     g.appendChild(btn);
   });
 }
-
 function saveDayStats(){
   var m=CM,day=now.getDate()-1,days=new Date(CY,m+1,0).getDate();
   load('stats_'+CY+'_'+m,null).then(function(ms){
@@ -336,8 +289,7 @@ function saveDayStats(){
     load(TODAY+'_pri',{}).then(function(pd){ms.pri[day]=Object.values(pd).filter(Boolean).length;save('stats_'+CY+'_'+m,ms);});
   });
 }
-
-var CDEF=["Complet\u00e9 mi tarea principal de hoy","Anoto 3 cosas que hice bien (por peque\u00f1as que sean)","Escribo la UNA tarea de ma\u00f1ana y cierro el ordenador"];
+var CDEF=["Complete mi tarea principal de hoy ✅","Anoto 3 cosas que hice bien (por pequenas que sean) 💜","Escribo la UNA tarea de manana y cierro el ordenador 🌙"];
 var cierre=CDEF.map(function(t){return {text:t,done:false};});
 function initCierre(){load(TODAY+'_cierre',null).then(function(s){if(s)cierre=cierre.map(function(t,i){return Object.assign({},t,{done:s[i]||false});});renderCierre();});}
 function renderCierre(){
@@ -349,12 +301,11 @@ function renderCierre(){
     el.appendChild(d);
   });
 }
-
 var PRI_DATA=[
-  {key:"inmo",icon:"ti-building",color:"#534AB7",bg:"#EEEDFE",title:"Inmobiliaria \u2014 Judith Rivera",sub:"Tarde 14\u201317:30h (ma\u00f1ana Lima)",items:[{key:"i1",text:"Contestar correos y mensajes",sub:"Mismo d\u00eda \u2014 lo m\u00e1s urgente",pri:"alta"},{key:"i2",text:"Actualizar info y fotos de propiedades",sub:"Base de todo lo dem\u00e1s",pri:"alta"},{key:"i3",text:"Portales inmobiliarios y web",sub:"2\u20133 veces por semana",pri:"media"},{key:"i4",text:"Promoci\u00f3n en redes sociales",sub:"1 publicaci\u00f3n/d\u00eda",pri:"baja"}]},
-  {key:"viajes",icon:"ti-plane",color:"#0F6E56",bg:"#E1F5EE",title:"Namaste Photo Tours + Premium",sub:"Ma\u00f1ana 10\u201311:30h",items:[{key:"v1",text:"Contenido para redes (IG, FB, LinkedIn)",sub:"1 pieza/d\u00eda \u2014 calidad sobre cantidad",pri:"alta"},{key:"v2",text:"Reels y videos de viajes",sub:"1 por semana",pri:"media"},{key:"v3",text:"Ideas creativas (cuaderno, 15 min)",sub:"Captura \u2014 no ejecutes en el momento",pri:"baja"}]},
-  {key:"curso",icon:"ti-school",color:"#854F0B",bg:"#FAEEDA",title:"Formaci\u00f3n",sub:"11:30h y 18:15h",items:[{key:"c1",text:"Trafficker \u2014 2 lecciones/d\u00eda",sub:"Term\u00ednalo antes de empezar otro",pri:"alta"},{key:"c2",text:"IA aplicada a tus negocios",sub:"Despu\u00e9s de terminar trafficker",pri:"media"}]},
-  {key:"personal",icon:"ti-heart",color:"#D85A30",bg:"#FAECE7",title:"Vida personal",sub:"Distribuido en el d\u00eda",items:[{key:"p1",text:"Ejercicio diario 20\u201330 min",sub:"Primero del d\u00eda \u2014 baja el cortisol",pri:"alta"},{key:"p2",text:"Hogar en micro-bloques",sub:"20' ma\u00f1ana + cena 17:30",pri:"media"},{key:"p3",text:"Men\u00fa semanal y compra (s\u00e1bado)",sub:"Un solo bloque",pri:"media"}]},
+  {key:"inmo",icon:"ti-building",color:"#534AB7",bg:"#EEEDFE",title:"Inmobiliaria - Judith Rivera 🏢",sub:"Tarde 14-17:30h (manana Lima)",items:[{key:"i1",text:"Contestar correos y mensajes",sub:"Mismo dia - lo mas urgente",pri:"alta"},{key:"i2",text:"Actualizar info y fotos de propiedades",sub:"Base de todo lo demas",pri:"alta"},{key:"i3",text:"Portales inmobiliarios y web",sub:"2-3 veces por semana",pri:"media"},{key:"i4",text:"Promocion en redes sociales",sub:"1 publicacion al dia",pri:"baja"}]},
+  {key:"viajes",icon:"ti-plane",color:"#0F6E56",bg:"#E1F5EE",title:"Namaste Photo Tours + Premium ✈️",sub:"Manana 10-11:30h",items:[{key:"v1",text:"Contenido para redes (IG, FB, LinkedIn)",sub:"1 pieza al dia - calidad sobre cantidad",pri:"alta"},{key:"v2",text:"Reels y videos de viajes",sub:"1 por semana",pri:"media"},{key:"v3",text:"Ideas creativas (cuaderno, 15 min)",sub:"Captura - no ejecutes en el momento",pri:"baja"}]},
+  {key:"curso",icon:"ti-school",color:"#854F0B",bg:"#FAEEDA",title:"Formacion 📚",sub:"11:30h y 18:15h",items:[{key:"c1",text:"Trafficker - 2 lecciones al dia",sub:"Terminalo antes de empezar otro",pri:"alta"},{key:"c2",text:"IA aplicada a tus negocios",sub:"Despues de terminar trafficker",pri:"media"}]},
+  {key:"personal",icon:"ti-heart",color:"#D85A30",bg:"#FAECE7",title:"Vida personal 💜",sub:"Distribuido en el dia",items:[{key:"p1",text:"Ejercicio diario 20-30 min 🏃",sub:"Primero del dia - baja el cortisol",pri:"alta"},{key:"p2",text:"Hogar en micro-bloques 🏠",sub:"20 min manana + cena 17:30",pri:"media"},{key:"p3",text:"Menu semanal y compra (sabado) 🛒",sub:"Un solo bloque",pri:"media"}]},
 ];
 var PBG={alta:"#FCEBEB",media:"#FAEEDA",baja:"#EAF3DE"};
 var PLB={alta:"urgente",media:"importante",baja:"cuando puedas"};
@@ -377,45 +328,40 @@ function initPrioridades(){
     });
   });
 }
-
 var SCH=[
   {t:"8:00",l:"2am Lima",b:["ejercicio","ejercicio","ejercicio","ejercicio","ejercicio","ejercicio","descanso"],lb:["Ejercicio 20'","Ejercicio 20'","Ejercicio 20'","Ejercicio 20'","Ejercicio 20'","Paseo suave","Descanso"]},
-  {t:"8:30",l:"2:30am",b:["personal","personal","personal","personal","personal","personal","personal"],lb:["Ducha \u00b7 desayuno","Ducha \u00b7 desayuno","Ducha \u00b7 desayuno","Ducha \u00b7 desayuno","Ducha \u00b7 desayuno","Desayuno","Desayuno"]},
+  {t:"8:30",l:"2:30am",b:["personal","personal","personal","personal","personal","personal","personal"],lb:["Ducha desayuno","Ducha desayuno","Ducha desayuno","Ducha desayuno","Ducha desayuno","Desayuno","Desayuno"]},
   {t:"9:15",l:"3:15am",b:["hogar","hogar","hogar","hogar","hogar","hogar","descanso"],lb:["Orden 20'","Plancha","Orden 20'","Orden 20'","Orden 20'","Limpieza hogar","Tiempo libre"]},
-  {t:"10:00",l:"4am",b:["viajes","viajes","viajes","viajes","viajes","hogar","descanso"],lb:["Namaste contenido","Namaste reels","Namaste RRSS","Namaste texto","Namaste revisi\u00f3n","Men\u00fa semana","Lectura"]},
-  {t:"11:30",l:"5:30am",b:["curso","curso","curso","curso","curso","hogar","descanso"],lb:["Curso lecci\u00f3n 1","Curso lecci\u00f3n 1","Curso lecci\u00f3n 1","Curso lecci\u00f3n 1","Curso lecci\u00f3n 1","Lista compra","Paseo Llanes"]},
-  {t:"12:15",l:"6:15am",b:["personal","personal","personal","personal","personal","personal","personal"],lb:["Comida \u00b7 pausa","Comida \u00b7 pausa","Comida \u00b7 pausa","Comida \u00b7 pausa","Comida \u00b7 pausa","Comida","Comida"]},
-  {t:"14:00",l:"8am Lima",b:["inmo","inmo","inmo","inmo","inmo","descanso","descanso"],lb:["Correos + msgs","Actualizar props","Fotos/v\u00eddeos","Portales + web","Cierre inmo","Tarde libre","Tarde libre"]},
+  {t:"10:00",l:"4am",b:["viajes","viajes","viajes","viajes","viajes","hogar","descanso"],lb:["Namaste contenido","Namaste reels","Namaste RRSS","Namaste texto","Namaste revision","Menu semana","Lectura"]},
+  {t:"11:30",l:"5:30am",b:["curso","curso","curso","curso","curso","hogar","descanso"],lb:["Curso leccion 1","Curso leccion 1","Curso leccion 1","Curso leccion 1","Curso leccion 1","Lista compra","Paseo Llanes"]},
+  {t:"12:15",l:"6:15am",b:["personal","personal","personal","personal","personal","personal","personal"],lb:["Comida pausa","Comida pausa","Comida pausa","Comida pausa","Comida pausa","Comida","Comida"]},
+  {t:"14:00",l:"8am Lima",b:["inmo","inmo","inmo","inmo","inmo","descanso","descanso"],lb:["Correos + msgs","Actualizar props","Fotos videos","Portales web","Cierre inmo","Tarde libre","Tarde libre"]},
   {t:"15:30",l:"9:30am",b:["personal","personal","personal","personal","personal","descanso","descanso"],lb:["Pausa activa","Pausa activa","Pausa activa","Pausa activa","Pausa activa","Descanso","Descanso"]},
-  {t:"16:00",l:"10am Lima",b:["inmo","inmo","inmo","inmo","inmo","descanso","descanso"],lb:["RRSS inmobiliaria","Anuncios props","Web inmobiliaria","M\u00e9tricas","RRSS + cierre","Tiempo libre","Tiempo libre"]},
+  {t:"16:00",l:"10am Lima",b:["inmo","inmo","inmo","inmo","inmo","descanso","descanso"],lb:["RRSS inmobiliaria","Anuncios props","Web inmobiliaria","Metricas","RRSS cierre","Tiempo libre","Tiempo libre"]},
   {t:"17:30",l:"11:30am",b:["hogar","hogar","hogar","hogar","hogar","personal","personal"],lb:["Preparar cena","Preparar cena","Preparar cena","Preparar cena","Preparar cena","Cena tranquila","Cena tranquila"]},
-  {t:"18:15",l:"12:15pm",b:["curso","curso","curso","curso","curso","descanso","descanso"],lb:["Curso lecci\u00f3n 2","Curso lecci\u00f3n 2","Curso lecci\u00f3n 2","Curso lecci\u00f3n 2","Curso lecci\u00f3n 2","Noche libre","Noche libre"]},
-  {t:"19:00",l:"1pm Lima",b:["personal","personal","personal","personal","personal","descanso","descanso"],lb:["Cierre del d\u00eda","Cierre del d\u00eda","Cierre del d\u00eda","Cierre del d\u00eda","Revisi\u00f3n semana","","Plan lunes 10'"]},
+  {t:"18:15",l:"12:15pm",b:["curso","curso","curso","curso","curso","descanso","descanso"],lb:["Curso leccion 2","Curso leccion 2","Curso leccion 2","Curso leccion 2","Curso leccion 2","Noche libre","Noche libre"]},
+  {t:"19:00",l:"1pm Lima",b:["personal","personal","personal","personal","personal","descanso","descanso"],lb:["Cierre del dia","Cierre del dia","Cierre del dia","Cierre del dia","Revision semana","","Plan lunes 10'"]},
 ];
-var BTIPS={inmo:"Bloque Lima 14\u201317:30h ESP = 8\u201311:30 Lima. Empieza por correos \u2014 lo urgente primero.",viajes:"1 pieza de contenido/d\u00eda para Namaste. Sin urgencias de zona horaria.",curso:"2 lecciones/d\u00eda = 10 por semana. Una a las 11:30 y otra a las 18:15.",ejercicio:"20 min por Llanes antes del ordenador. Baja el cortisol \u2014 es medicina.",hogar:"20' orden ma\u00f1ana + cena 17:30. S\u00e1bado: limpieza + men\u00fa + compra.",descanso:"Descanso real. El fin de semana es para recargar \u2014 sin culpa.",personal:"Pausa sin pantallas. Tu cerebro TDAH necesita estos huecos."};
+var BTIPS={inmo:"Bloque Lima 14-17:30h = 8-11:30 Lima. Empieza por correos - lo urgente primero.",viajes:"1 pieza de contenido al dia para Namaste. Sin urgencias de zona horaria.",curso:"2 lecciones al dia = 10 por semana. Una a las 11:30 y otra a las 18:15.",ejercicio:"20 min por Llanes antes del ordenador. Baja el cortisol - es medicina.",hogar:"20 min orden manana + cena 17:30. Sabado: limpieza + menu + compra.",descanso:"Descanso real. El fin de semana es para recargar - sin culpa.",personal:"Pausa sin pantallas. Tu cerebro TDAH necesita estos huecos."};
 var wg=document.getElementById('wgrid');
-["","Lun","Mar","Mi\u00e9","Jue","Vie","S\u00e1b","Dom"].forEach(function(d,i){var h=document.createElement('div');h.className=i>=6?'dh wk':'dh';h.textContent=d;wg.appendChild(h);});
+["","Lun","Mar","Mie","Jue","Vie","Sab","Dom"].forEach(function(d,i){var h=document.createElement('div');h.className=i>=6?'dh wk':'dh';h.textContent=d;wg.appendChild(h);});
 SCH.forEach(function(row){var t=document.createElement('div');t.className='tl';t.innerHTML=row.t+'<div class="zona">'+row.l+'</div>';wg.appendChild(t);row.b.forEach(function(type,di){var btn=document.createElement('button');btn.className='bl '+type;btn.textContent=row.lb[di]||'';if(BTIPS[type]){btn.onclick=function(){document.getElementById('tipbox').innerHTML='<strong>'+row.lb[di]+':</strong> '+BTIPS[type];};}wg.appendChild(btn);});});
-
 var TDAH_DATA=[
-  {icon:"ti-number-1",color:"#534AB7",bg:"#EEEDFE",title:"Una tarea principal al d\u00eda",text:"Antes de abrir el email, decide cu\u00e1l es la UNA cosa que har\u00eda que el d\u00eda valiera la pena. Esa va primero."},
-  {icon:"ti-clock",color:"#D85A30",bg:"#FAECE7",title:"Bloques de 90 min con temporizador",text:"Cuando suena, paras aunque est\u00e9s en racha. Evita el hiperfoco agotador."},
-  {icon:"ti-writing",color:"#854F0B",bg:"#FAEEDA",title:"Cuaderno de capturas para las ideas",text:"Idea para Namaste mientras trabajas en inmobiliaria \u2192 esc\u00edbela y vuelve. Las ideas no se pierden, el foco s\u00ed."},
-  {icon:"ti-ban",color:"#993C1D",bg:"#FAECE7",title:"Una ventana abierta, sin multitarea",text:"Cierra todas las pesta\u00f1as excepto la tarea activa. El email solo en el bloque de inmobiliaria."},
-  {icon:"ti-run",color:"#0F6E56",bg:"#E1F5EE",title:"Ejercicio antes del ordenador",text:"20\u201330 min. Caminar por Llanes cuenta. Reduce cortisol y regula el TDAH."},
-  {icon:"ti-moon",color:"#3C3489",bg:"#EEEDFE",title:"Cierre a las 19:00 \u2014 t\u00fa decides",text:"Tu cerebro TDAH no sabe cu\u00e1ndo parar. Decides t\u00fa. 19:00, ordenador cerrado."},
-  {icon:"ti-heart",color:"#D4537E",bg:"#FBEAF0",title:"Sin culpa por los d\u00edas rotos",text:"Un d\u00eda malo no cancela la semana. Reenganchas ma\u00f1ana \u2014 sin drama."},
-  {icon:"ti-chart-bar",color:"#3B6D11",bg:"#EAF3DE",title:"Un curso a la vez",text:"Trafficker completo \u2192 IA \u2192 siguiente. As\u00ed es como se termina algo de verdad."}
+  {icon:"ti-number-1",color:"#534AB7",bg:"#EEEDFE",title:"Una tarea principal al dia",text:"Antes de abrir el email, decide cual es la UNA cosa que haria que el dia valiera la pena. Esa va primero."},
+  {icon:"ti-clock",color:"#D85A30",bg:"#FAECE7",title:"Bloques de 90 min con temporizador ⏱️",text:"Cuando suena, paras aunque estes en racha. Evita el hiperfoco agotador."},
+  {icon:"ti-writing",color:"#854F0B",bg:"#FAEEDA",title:"Cuaderno de capturas para las ideas 📓",text:"Idea para Namaste mientras trabajas en inmobiliaria - escribela y vuelve. Las ideas no se pierden, el foco si."},
+  {icon:"ti-ban",color:"#993C1D",bg:"#FAECE7",title:"Una ventana abierta, sin multitarea",text:"Cierra todas las pestanas excepto la tarea activa. El email solo en el bloque de inmobiliaria."},
+  {icon:"ti-run",color:"#0F6E56",bg:"#E1F5EE",title:"Ejercicio antes del ordenador 🏃",text:"20-30 min. Caminar por Llanes cuenta. Reduce cortisol y regula el TDAH."},
+  {icon:"ti-moon",color:"#3C3489",bg:"#EEEDFE",title:"Cierre a las 19:00 - tu decides 🌙",text:"Tu cerebro TDAH no sabe cuando parar. Decides tu. 19:00, ordenador cerrado."},
+  {icon:"ti-heart",color:"#D4537E",bg:"#FBEAF0",title:"Sin culpa por los dias rotos 💜",text:"Un dia malo no cancela la semana. Reenganchas manana - sin drama."},
+  {icon:"ti-chart-bar",color:"#3B6D11",bg:"#EAF3DE",title:"Un curso a la vez 📚",text:"Trafficker completo - IA - siguiente. Asi es como se termina algo de verdad."}
 ];
 var tcc=document.getElementById('tdahcards');
 TDAH_DATA.forEach(function(r){tcc.innerHTML+='<div class="tc"><div class="tci" style="background:'+r.bg+'"><i class="ti '+r.icon+'" style="color:'+r.color+'"></i></div><div><div class="tct">'+r.title+'</div><div class="tcd">'+r.text+'</div></div></div>';});
-
 var bT=null,bSt=0,bRd=0;
 var BS=["Inhala... 1, 2, 3, 4","Aguanta... 1, 2, 3, 4","Exhala... 1, 2, 3, 4","Pausa... 1, 2, 3, 4"];
 function startBreath(){if(bT){clearInterval(bT);bT=null;document.getElementById('breathbox').classList.remove('show');return;}var box=document.getElementById('breathbox');box.classList.add('show');bSt=0;bRd=0;function tick(){box.textContent=BS[bSt]+' (ronda '+(bRd+1)+'/4)';bSt++;if(bSt>=4){bSt=0;bRd++;}if(bRd>=4){clearInterval(bT);bT=null;box.textContent="Bien hecho. Puedes continuar con calma.";setTimeout(function(){box.classList.remove('show');},3000);}}tick();bT=setInterval(tick,4000);}
-
 function cWD(m,upTo){var n=0;for(var d=1;d<=upTo;d++){var w=new Date(CY,m,d).getDay();if(w!==0&&w!==6)n++;}return n;}
-
 function renderProgreso(){
   var allS={};var pend=TRACK.length;
   TRACK.forEach(function(m){var days=new Date(CY,m+1,0).getDate();var def={inmo:Array(days).fill(0),namaste:Array(days).fill(0),curso:Array(days).fill(0),ejercicio:Array(days).fill(0),pri:Array(days).fill(0),total:Array(days).fill(0)};load('stats_'+CY+'_'+m,def).then(function(s){allS[m]=s;pend--;if(pend===0)renderProgresoData(allS);});});
@@ -427,9 +373,9 @@ function renderProgresoData(allS){
   var eg=document.getElementById('evogrid');eg.innerHTML='';
   TRACK.forEach(function(m,i){var fut=m>CM,pct=pcts[i],bH=fut?0:Math.max(Math.round(pct/maxP*76),4);eg.innerHTML+='<div class="ecol'+(fut?' fut':'')+'"><div class="epct" style="color:'+(fut?'var(--tx3)':BC[i])+'">'+( fut?'-':pct+'%')+'</div><div class="ebar-w"><div class="ebar-f" style="height:'+bH+'px;background:'+BC[i]+'"></div></div><div class="elbl">'+MESES[m].slice(0,3)+'</div></div>';});
   var tp=mPct(CM);
-  var msgs=[{min:0,max:15,e:"\ud83c\udf31",t:"Empezando el camino",s:"Cada d\u00eda que marcas algo es una victoria. Importa que empezaste.",bg:"#E1F5EE"},{min:15,max:35,e:"\ud83d\udd25",t:"Tomando impulso",s:"Tu cerebro est\u00e1 aprendiendo la rutina. Lo m\u00e1s dif\u00edcil ya pas\u00f3.",bg:"#FAECE7"},{min:35,max:55,e:"\u26a1",t:"A mitad del camino",s:"M\u00e1s de la mitad de los d\u00edas activa. Eso es enorme para un cerebro TDAH.",bg:"#EEEDFE"},{min:55,max:75,e:"\ud83c\udf1f",t:"En racha seria",s:"Tu sistema funciona. Est\u00e1s construyendo algo real d\u00eda a d\u00eda.",bg:"#FAEEDA"},{min:75,max:101,e:"\ud83c\udfc6",t:"Mes excepcional",s:"Consistencia real. No perfecci\u00f3n \u2014 consistencia. Eres un ejemplo para ti misma.",bg:"#FAEEDA"}];
+  var msgs=[{min:0,max:15,e:"🌱",t:"Empezando el camino",s:"Cada dia que marcas algo es una victoria. Importa que empezaste.",bg:"#E1F5EE"},{min:15,max:35,e:"🔥",t:"Tomando impulso",s:"Tu cerebro esta aprendiendo la rutina. Lo mas dificil ya paso.",bg:"#FAECE7"},{min:35,max:55,e:"⚡",t:"A mitad del camino",s:"Mas de la mitad de los dias activa. Eso es enorme para un cerebro TDAH.",bg:"#EEEDFE"},{min:55,max:75,e:"🌟",t:"En racha seria",s:"Tu sistema funciona. Estas construyendo algo real dia a dia.",bg:"#FAEEDA"},{min:75,max:101,e:"🏆",t:"Mes excepcional",s:"Consistencia real. No perfeccion - consistencia. Eres un ejemplo para ti misma.",bg:"#FAEEDA"}];
   var msg=msgs.filter(function(x){return tp>=x.min&&tp<x.max;})[0]||msgs[0];
-  var mb=document.getElementById('motbox');mb.innerHTML='<div style="font-size:28px">'+msg.e+'</div><div style="font-size:14px;font-weight:500;margin-top:.25rem;color:var(--tx)">'+msg.t+' \u2014 '+tp+'% en '+MESES[CM]+'</div><div style="font-size:12px;color:var(--tx2);margin-top:4px;line-height:1.5">'+msg.s+'</div>';
+  var mb=document.getElementById('motbox');mb.innerHTML='<div style="font-size:28px">'+msg.e+'</div><div style="font-size:14px;font-weight:500;margin-top:.25rem;color:var(--tx)">'+msg.t+' - '+tp+'% en '+MESES[CM]+'</div><div style="font-size:12px;color:var(--tx2);margin-top:4px;line-height:1.5">'+msg.s+'</div>';
   mb.style.background=msg.bg;
   var mt=document.getElementById('mestabs');mt.innerHTML='';var selM=CM;
   function renderDet(m){
@@ -437,14 +383,13 @@ function renderProgresoData(allS){
     function cA(arr){var n=0;for(var d=0;d<limit;d++){var dw=new Date(CY,m,d+1).getDay();if(dw!==0&&dw!==6&&arr[d]>0)n++;}return n;}
     var inmoD=cA(s.inmo),namaD=cA(s.namaste),cursD=cA(s.curso),ejercD=cA(s.ejercicio),totD=cA(s.total),priD=s.pri?cA(s.pri):0;
     var sg=document.getElementById('sgrid');sg.innerHTML='';
-    [{n:totD,l:"D\u00edas activa",s:"de "+wd+" lab.",c:'#534AB7'},{n:inmoD,l:"Inmobiliaria",s:"de "+wd+" lab.",c:'#534AB7'},{n:namaD,l:"Namaste",s:"de "+wd+" lab.",c:'#0F6E56'},{n:ejercD,l:"Ejercicio",s:"de "+wd+" lab.",c:'#D85A30'},{n:priD,l:"Prioridades",s:"marcadas",c:'#854F0B'}].forEach(function(st){var p=wd>0?Math.round(st.n/wd*100):0;sg.innerHTML+='<div class="sc"><div class="sn" style="color:'+st.c+'">'+st.n+'</div><div class="sl">'+st.l+'</div><div class="ss">'+st.s+'</div><div class="sb2"><div class="sf2" style="width:'+p+'%;background:'+st.c+'"></div></div></div>';});
+    [{n:totD,l:"Dias activa",s:"de "+wd+" lab.",c:'#534AB7'},{n:inmoD,l:"Inmobiliaria",s:"de "+wd+" lab.",c:'#534AB7'},{n:namaD,l:"Namaste",s:"de "+wd+" lab.",c:'#0F6E56'},{n:ejercD,l:"Ejercicio",s:"de "+wd+" lab.",c:'#D85A30'},{n:priD,l:"Prioridades",s:"marcadas",c:'#854F0B'}].forEach(function(st){var p=wd>0?Math.round(st.n/wd*100):0;sg.innerHTML+='<div class="sc"><div class="sn" style="color:'+st.c+'">'+st.n+'</div><div class="sl">'+st.l+'</div><div class="ss">'+st.s+'</div><div class="sb2"><div class="sf2" style="width:'+p+'%;background:'+st.c+'"></div></div></div>';});
     var ab=document.getElementById('areabars');ab.innerHTML='';
     [{l:'Inmobiliaria',d:inmoD,c:'#534AB7'},{l:'Namaste',d:namaD,c:'#0F6E56'},{l:'Curso',d:cursD,c:'#854F0B'},{l:'Ejercicio',d:ejercD,c:'#D85A30'}].forEach(function(a){var p=wd>0?Math.round(a.d/wd*100):0;ab.innerHTML+='<div class="arow"><div class="aname"><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:'+a.c+'"></span>'+a.l+'</div><div class="abw"><div class="abf" style="width:'+p+'%;background:'+a.c+'"></div></div><div class="apct" style="color:'+a.c+'">'+p+'%</div></div>';});
   }
   TRACK.filter(function(m){return m<=CM;}).forEach(function(m){var btn=document.createElement('button');btn.className='mtab'+(m===selM?' on':'');btn.textContent=MESES[m].slice(0,3);btn.onclick=function(){selM=m;document.querySelectorAll('.mtab').forEach(function(b){b.classList.remove('on');});btn.classList.add('on');renderDet(m);};mt.appendChild(btn);});
   renderDet(selM);
 }
-
 function renderPremios(){
   var allS={};var pend=TRACK.length;
   TRACK.forEach(function(m){var days=new Date(CY,m+1,0).getDate();var def={inmo:Array(days).fill(0),namaste:Array(days).fill(0),curso:Array(days).fill(0),ejercicio:Array(days).fill(0),pri:Array(days).fill(0),total:Array(days).fill(0)};load('stats_'+CY+'_'+m,def).then(function(s){allS[m]=s;pend--;if(pend===0)buildPremios(allS);});});
@@ -455,28 +400,24 @@ function buildPremios(allS){
   var tot={wd:0,done:0,inmo:0,namaste:0,curso:0,ejercicio:0,bestStreak:0};var mData={};
   TRACK.forEach(function(m){var ms=getMStats(m);mData[m]=ms;tot.wd+=ms.wd;tot.done+=ms.done;tot.inmo+=ms.inmo;tot.namaste+=ms.namaste;tot.curso+=ms.curso;tot.ejercicio+=ms.ejercicio;if(ms.streak>tot.bestStreak)tot.bestStreak=ms.streak;});
   var gPct=tot.wd>0?Math.round(tot.done/tot.wd*100):0;
-  var gE=gPct>=85?"\ud83e\udd47":gPct>=70?"\ud83e\udd48":gPct>=50?"\ud83e\udd49":gPct>=30?"\u2b50":"\ud83c\udf31";
+  var gE=gPct>=85?"🥇":gPct>=70?"🥈":gPct>=50?"🥉":gPct>=30?"⭐":"🌱";
   var gC=gPct>=70?'#854F0B':gPct>=50?'#993C1D':gPct>=30?'#534AB7':'#0F6E56';
   var gBg=gPct>=70?'#FAEEDA':gPct>=50?'#FAECE7':gPct>=30?'#EEEDFE':'#E1F5EE';
-  var gMsg=gPct>=85?'Rendimiento excepcional. Consistencia real durante meses.':gPct>=70?'Gran rendimiento. Tu sistema funcion\u00f3 de verdad.':gPct>=50?'Buen trabajo. M\u00e1s de la mitad de los d\u00edas, activa.':gPct>=30?'Empezaste y eso ya es ganar.':'Semestre de aprendizaje. Conociste tu sistema.';
-  cont.innerHTML='<div style="background:'+gBg+';border-radius:var(--rl);padding:1.25rem;margin-bottom:1.25rem;text-align:center;border:0.5px solid var(--bd)"><div style="font-size:52px">'+gE+'</div><div style="font-size:18px;font-weight:500;color:'+gC+';margin-top:.5rem">'+gPct+'% de d\u00edas laborables activa</div><div style="font-size:12px;color:var(--tx2);margin-top:4px;line-height:1.5">'+gMsg+'</div><div style="display:flex;justify-content:center;gap:1.5rem;margin-top:.875rem;flex-wrap:wrap"><div style="text-align:center"><div style="font-size:22px;font-weight:500;color:var(--tx)">'+tot.done+'</div><div style="font-size:10px;color:var(--tx2)">d\u00edas activa</div></div><div style="text-align:center"><div style="font-size:22px;font-weight:500;color:var(--tx)">'+tot.wd+'</div><div style="font-size:10px;color:var(--tx2)">d\u00edas laborables</div></div><div style="text-align:center"><div style="font-size:22px;font-weight:500;color:var(--tx)">'+tot.bestStreak+'</div><div style="font-size:10px;color:var(--tx2)">mejor racha</div></div></div></div>';
-
-  cont.innerHTML+='<div style="font-size:13px;font-weight:500;color:var(--tx);margin-bottom:.75rem">\ud83c\udfc5 Medallas por \u00e1rea</div>';
-  var areas=[{lbl:'Inmobiliaria',e:'\ud83c\udfe2',color:'#534AB7',bg:'#EEEDFE',val:tot.inmo},{lbl:'Namaste',e:'\u2708\ufe0f',color:'#0F6E56',bg:'#E1F5EE',val:tot.namaste},{lbl:'Trafficker',e:'\ud83d\udcda',color:'#854F0B',bg:'#FAEEDA',val:tot.curso},{lbl:'Ejercicio',e:'\ud83c\udfc3\u200d\u2640\ufe0f',color:'#D85A30',bg:'#FAECE7',val:tot.ejercicio}];
+  var gMsg=gPct>=85?'Rendimiento excepcional. Consistencia real durante meses.':gPct>=70?'Gran rendimiento. Tu sistema funciono de verdad.':gPct>=50?'Buen trabajo. Mas de la mitad de los dias, activa.':gPct>=30?'Empezaste y eso ya es ganar.':'Semestre de aprendizaje. Conociste tu sistema.';
+  cont.innerHTML='<div style="background:'+gBg+';border-radius:var(--rl);padding:1.25rem;margin-bottom:1.25rem;text-align:center;border:0.5px solid var(--bd)"><div style="font-size:52px">'+gE+'</div><div style="font-size:18px;font-weight:500;color:'+gC+';margin-top:.5rem">'+gPct+'% de dias laborables activa</div><div style="font-size:12px;color:var(--tx2);margin-top:4px;line-height:1.5">'+gMsg+'</div><div style="display:flex;justify-content:center;gap:1.5rem;margin-top:.875rem;flex-wrap:wrap"><div style="text-align:center"><div style="font-size:22px;font-weight:500;color:var(--tx)">'+tot.done+'</div><div style="font-size:10px;color:var(--tx2)">dias activa</div></div><div style="text-align:center"><div style="font-size:22px;font-weight:500;color:var(--tx)">'+tot.wd+'</div><div style="font-size:10px;color:var(--tx2)">dias laborables</div></div><div style="text-align:center"><div style="font-size:22px;font-weight:500;color:var(--tx)">'+tot.bestStreak+'</div><div style="font-size:10px;color:var(--tx2)">mejor racha 🔥</div></div></div></div>';
+  cont.innerHTML+='<div style="font-size:13px;font-weight:500;color:var(--tx);margin-bottom:.75rem">🏅 Medallas por area</div>';
+  var areas=[{lbl:'Inmobiliaria 🏢',color:'#534AB7',bg:'#EEEDFE',val:tot.inmo},{lbl:'Namaste ✈️',color:'#0F6E56',bg:'#E1F5EE',val:tot.namaste},{lbl:'Trafficker 📚',color:'#854F0B',bg:'#FAEEDA',val:tot.curso},{lbl:'Ejercicio 🏃',color:'#D85A30',bg:'#FAECE7',val:tot.ejercicio}];
   var ag='<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:8px;margin-bottom:1.25rem">';
-  areas.forEach(function(a){var pct=tot.wd>0?Math.round(a.val/tot.wd*100):0;var mE=pct>=80?"\ud83e\udd47":pct>=60?"\ud83e\udd48":pct>=40?"\ud83e\udd49":pct>=20?"\u2b50":"\ud83c\udf31";ag+='<div style="background:#fff;border-radius:var(--rl);padding:.875rem 1rem;border:0.5px solid var(--bd);text-align:center;box-shadow:0 1px 4px rgba(0,0,0,0.05)"><div style="font-size:22px;margin-bottom:3px">'+a.e+'</div><div style="font-size:12px;font-weight:500;color:var(--tx);margin-bottom:4px">'+a.lbl+'</div><div style="font-size:28px">'+mE+'</div><div style="font-size:20px;font-weight:500;color:'+a.color+';margin-top:3px">'+pct+'%</div><div style="font-size:10px;color:var(--tx3)">'+a.val+' de '+tot.wd+' d\u00edas</div><div style="height:4px;background:var(--bg3);border-radius:5px;margin-top:8px;overflow:hidden"><div style="height:100%;width:'+pct+'%;background:'+a.color+';border-radius:5px"></div></div></div>';});
+  areas.forEach(function(a){var pct=tot.wd>0?Math.round(a.val/tot.wd*100):0;var mE=pct>=80?"🥇":pct>=60?"🥈":pct>=40?"🥉":pct>=20?"⭐":"🌱";ag+='<div style="background:#fff;border-radius:var(--rl);padding:.875rem 1rem;border:0.5px solid var(--bd);text-align:center;box-shadow:0 1px 4px rgba(0,0,0,.05)"><div style="font-size:14px;font-weight:500;color:var(--tx);margin-bottom:4px">'+a.lbl+'</div><div style="font-size:28px">'+mE+'</div><div style="font-size:20px;font-weight:500;color:'+a.color+';margin-top:3px">'+pct+'%</div><div style="font-size:10px;color:var(--tx3)">'+a.val+' de '+tot.wd+' dias</div><div style="height:4px;background:var(--bg3);border-radius:5px;margin-top:8px;overflow:hidden"><div style="height:100%;width:'+pct+'%;background:'+a.color+';border-radius:5px"></div></div></div>';});
   ag+='</div>';cont.innerHTML+=ag;
-
-  cont.innerHTML+='<div style="font-size:13px;font-weight:500;color:var(--tx);margin-bottom:.75rem">\ud83d\udcc6 Mes a mes</div>';
+  cont.innerHTML+='<div style="font-size:13px;font-weight:500;color:var(--tx);margin-bottom:.75rem">📅 Mes a mes</div>';
   var mh='<div style="display:flex;flex-direction:column;gap:5px;margin-bottom:1.25rem">';
-  TRACK.forEach(function(m){var ms=mData[m],pct=ms&&ms.wd>0?Math.round(ms.done/ms.wd*100):0,isFut=m>CM;var mE=pct>=80?"\ud83e\udd47":pct>=60?"\ud83e\udd48":pct>=40?"\ud83e\udd49":pct>=20?"\u2b50":"\ud83c\udf31";var bc=pct>=80?'#1D9E75':pct>=60?'#534AB7':pct>=40?'#EF9F27':'#D85A30';mh+='<div style="display:flex;align-items:center;gap:10px;padding:8px 12px;background:#fff;border-radius:var(--r);border:0.5px solid var(--bd);opacity:'+(isFut?.35:1)+'"><div style="font-size:15px;width:22px;text-align:center">'+(isFut?'\u23f3':mE)+'</div><div style="font-size:12px;font-weight:500;color:var(--tx);width:75px;flex-shrink:0">'+MESES[m].slice(0,3)+'</div><div style="flex:1;height:8px;background:var(--bg3);border-radius:5px;overflow:hidden"><div style="height:100%;width:'+(isFut?0:pct)+'%;background:'+bc+';border-radius:5px"></div></div><div style="font-size:12px;font-weight:500;color:'+(isFut?'var(--tx3)':bc)+';width:32px;text-align:right">'+(isFut?'-':pct+'%')+'</div></div>';});
+  TRACK.forEach(function(m){var ms=mData[m],pct=ms&&ms.wd>0?Math.round(ms.done/ms.wd*100):0,isFut=m>CM;var mE=pct>=80?"🥇":pct>=60?"🥈":pct>=40?"🥉":pct>=20?"⭐":"🌱";var bc=pct>=80?'#1D9E75':pct>=60?'#534AB7':pct>=40?'#EF9F27':'#D85A30';mh+='<div style="display:flex;align-items:center;gap:10px;padding:8px 12px;background:#fff;border-radius:var(--r);border:0.5px solid var(--bd);opacity:'+(isFut?.35:1)+'"><div style="font-size:15px;width:22px;text-align:center">'+(isFut?'⏳':mE)+'</div><div style="font-size:12px;font-weight:500;color:var(--tx);width:75px;flex-shrink:0">'+MESES[m].slice(0,3)+'</div><div style="flex:1;height:8px;background:var(--bg3);border-radius:5px;overflow:hidden"><div style="height:100%;width:'+(isFut?0:pct)+'%;background:'+bc+';border-radius:5px"></div></div><div style="font-size:12px;font-weight:500;color:'+(isFut?'var(--tx3)':bc)+';width:32px;text-align:right">'+(isFut?'-':pct+'%')+'</div></div>';});
   mh+='</div>';cont.innerHTML+=mh;
-
-  var fm=gPct>=70?'Has demostrado que tu sistema funciona. El TDAH no te define \u2014 lo que haces cada d\u00eda, s\u00ed.':gPct>=40?'Has construido un h\u00e1bito real en medio de dos trabajos, un curso y la vida. Eso es enorme.':'Empezaste. Conociste tu sistema. El siguiente semestre llegar\u00e1s con todo aprendido.';
+  var fm=gPct>=70?'Has demostrado que tu sistema funciona. El TDAH no te define - lo que haces cada dia, si.':gPct>=40?'Has construido un habito real en medio de dos trabajos, un curso y la vida. Eso es enorme.':'Empezaste. Conociste tu sistema. El siguiente semestre lo veras con mas claridad.';
   var fb=gPct>=70?'#E1F5EE':gPct>=40?'#EEEDFE':'#FAEEDA';
-  cont.innerHTML+='<div style="background:'+fb+';border-radius:var(--rl);padding:1rem 1.25rem;text-align:center;border:0.5px solid var(--bd)"><div style="font-size:24px;margin-bottom:.5rem">\ud83e\uddd7\u200d\u2640\ufe0f</div><div style="font-size:13px;color:var(--tx);line-height:1.65;font-style:italic">'+fm+'</div></div>';
+  cont.innerHTML+='<div style="background:'+fb+';border-radius:var(--rl);padding:1rem 1.25rem;text-align:center;border:0.5px solid var(--bd)"><div style="font-size:24px;margin-bottom:.5rem">🧠🩷</div><div style="font-size:13px;color:var(--tx);line-height:1.65;font-style:italic">'+fm+'</div></div>';
 }
-
 function sv(v){
   document.querySelectorAll('.view').forEach(function(el){el.classList.remove('on');});
   document.querySelectorAll('.nb').forEach(function(el){el.classList.remove('on');});
@@ -486,7 +427,6 @@ function sv(v){
   if(v==='prioridades')initPrioridades();
   if(v==='premios')renderPremios();
 }
-
 initTasks();initHabs();initCierre();initPrioridades();
 </script>
 </body>
