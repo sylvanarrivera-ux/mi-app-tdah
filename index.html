@@ -238,16 +238,16 @@ if(unaEl){load(TODAY+'_una','').then(function(v){if(v)unaEl.value=v;});unaEl.add
 var TDEF=[
   {text:"Contestar correos y mensajes de clientes Lima",tag:"Inmobiliaria",tc:"#534AB7",tb:"#EEEDFE",pri:"alta",cat:"inmo"},
   {text:"Actualizar info de 1-2 propiedades",tag:"Inmobiliaria",tc:"#534AB7",tb:"#EEEDFE",pri:"alta",cat:"inmo"},
-  {text:"Contenido para Namaste (post, reel o idea) 🌍",tag:"Namaste",tc:"#0F6E56",tb:"#E1F5EE",pri:"media",cat:"namaste"},
-  {text:"Curso trafficker - leccion manana 11:30h 📚",tag:"Curso",tc:"#854F0B",tb:"#FAEEDA",pri:"media",cat:"curso"},
+  {text:"Contenido para Namaste (post, reel o idea)",tag:"Namaste",tc:"#0F6E56",tb:"#E1F5EE",pri:"media",cat:"namaste"},
+  {text:"Curso trafficker - leccion manana 11:30h",tag:"Curso",tc:"#854F0B",tb:"#FAEEDA",pri:"media",cat:"curso"},
   {text:"Publicar 1 propiedad en redes sociales",tag:"Inmobiliaria",tc:"#534AB7",tb:"#EEEDFE",pri:"media",cat:"inmo"},
-  {text:"Curso trafficker - leccion tarde 18:15h 📚",tag:"Curso",tc:"#854F0B",tb:"#FAEEDA",pri:"baja",cat:"curso"},
+  {text:"Curso trafficker - leccion tarde 18:15h",tag:"Curso",tc:"#854F0B",tb:"#FAEEDA",pri:"baja",cat:"curso"},
 ];
 var PC={alta:"#E24B4A",media:"#EF9F27",baja:"#639922"};
-var PM=["Elige tu tarea principal y empieza cuando estes lista.","Buen comienzo. Un paso a la vez. 💪","Vas bien. Sin prisa, sin pausa.","Mitad del camino. Lo estas haciendo increible! ⚡","Casi. Cada tarea cuenta.","Un poco mas - lo estas logrando. 🌟","Dia completado. Eres imparable! 🏆"];
+var PM=["Elige tu tarea principal y empieza cuando estes lista.","Buen comienzo. Un paso a la vez.","Vas bien. Sin prisa, sin pausa.","Mitad del camino. Lo estas haciendo increible!","Casi. Cada tarea cuenta.","Un poco mas - lo estas logrando.","Dia completado. Eres imparable!"];
 var tasks=TDEF.map(function(t){return Object.assign({},t,{done:false});});
 function initTasks(){
-  if(IS_WK){document.getElementById('wkview').style.display='block';document.getElementById('wdview').style.display='none';if(now.getDay()===0){var el=document.getElementById('wktask');if(el)el.textContent='Paseo por Llanes y tiempo libre total 🌊';}return;}
+  if(IS_WK){document.getElementById('wkview').style.display='block';document.getElementById('wdview').style.display='none';if(now.getDay()===0){var el=document.getElementById('wktask');if(el)el.textContent='Paseo por Llanes y tiempo libre total';}return;}
   document.getElementById('wkview').style.display='none';document.getElementById('wdview').style.display='block';
   load(TODAY+'_tasks',null).then(function(s){if(s&&s.length===tasks.length)tasks=tasks.map(function(t,i){return Object.assign({},t,{done:s[i]});});renderTasks();updProg();});
 }
@@ -261,7 +261,7 @@ function renderTasks(){
   });
 }
 function updProg(){var dn=tasks.filter(function(t){return t.done;}).length;var pct=Math.round(dn/tasks.length*100);document.getElementById('pfill').style.width=pct+'%';document.getElementById('pct').textContent=pct+'%';document.getElementById('dcnt').textContent=dn+'/'+tasks.length;document.getElementById('pmsg').textContent=PM[dn]||PM[PM.length-1];document.getElementById('pfill').style.background=pct===100?'#1D9E75':'#534AB7';}
-var HRAP=[{key:"ejercicio",label:"Ejercicio 🏃",color:"#D85A30",bg:"#FAECE7"},{key:"orden",label:"Orden hogar 🏠",color:"#3B6D11",bg:"#EAF3DE"},{key:"pausa",label:"Sin pantallas 🌿",color:"#0F6E56",bg:"#E1F5EE"}];
+var HRAP=[{key:"ejercicio",label:"Ejercicio",color:"#D85A30",bg:"#FAECE7"},{key:"orden",label:"Orden hogar",color:"#3B6D11",bg:"#EAF3DE"},{key:"pausa",label:"Sin pantallas",color:"#0F6E56",bg:"#E1F5EE"}];
 var habs={};
 function initHabs(){load(TODAY+'_hab',{}).then(function(v){habs=v;renderHabs();});}
 function renderHabs(){
@@ -289,7 +289,7 @@ function saveDayStats(){
     load(TODAY+'_pri',{}).then(function(pd){ms.pri[day]=Object.values(pd).filter(Boolean).length;save('stats_'+CY+'_'+m,ms);});
   });
 }
-var CDEF=["Complete mi tarea principal de hoy ✅","Anoto 3 cosas que hice bien (por pequenas que sean) 💜","Escribo la UNA tarea de manana y cierro el ordenador 🌙"];
+var CDEF=["Complete mi tarea principal de hoy","Anoto 3 cosas que hice bien (por pequenas que sean)","Escribo la UNA tarea de manana y cierro el ordenador"];
 var cierre=CDEF.map(function(t){return {text:t,done:false};});
 function initCierre(){load(TODAY+'_cierre',null).then(function(s){if(s)cierre=cierre.map(function(t,i){return Object.assign({},t,{done:s[i]||false});});renderCierre();});}
 function renderCierre(){
@@ -302,10 +302,10 @@ function renderCierre(){
   });
 }
 var PRI_DATA=[
-  {key:"inmo",icon:"ti-building",color:"#534AB7",bg:"#EEEDFE",title:"Inmobiliaria - Judith Rivera 🏢",sub:"Tarde 14-17:30h (manana Lima)",items:[{key:"i1",text:"Contestar correos y mensajes",sub:"Mismo dia - lo mas urgente",pri:"alta"},{key:"i2",text:"Actualizar info y fotos de propiedades",sub:"Base de todo lo demas",pri:"alta"},{key:"i3",text:"Portales inmobiliarios y web",sub:"2-3 veces por semana",pri:"media"},{key:"i4",text:"Promocion en redes sociales",sub:"1 publicacion al dia",pri:"baja"}]},
-  {key:"viajes",icon:"ti-plane",color:"#0F6E56",bg:"#E1F5EE",title:"Namaste Photo Tours + Premium ✈️",sub:"Manana 10-11:30h",items:[{key:"v1",text:"Contenido para redes (IG, FB, LinkedIn)",sub:"1 pieza al dia - calidad sobre cantidad",pri:"alta"},{key:"v2",text:"Reels y videos de viajes",sub:"1 por semana",pri:"media"},{key:"v3",text:"Ideas creativas (cuaderno, 15 min)",sub:"Captura - no ejecutes en el momento",pri:"baja"}]},
-  {key:"curso",icon:"ti-school",color:"#854F0B",bg:"#FAEEDA",title:"Formacion 📚",sub:"11:30h y 18:15h",items:[{key:"c1",text:"Trafficker - 2 lecciones al dia",sub:"Terminalo antes de empezar otro",pri:"alta"},{key:"c2",text:"IA aplicada a tus negocios",sub:"Despues de terminar trafficker",pri:"media"}]},
-  {key:"personal",icon:"ti-heart",color:"#D85A30",bg:"#FAECE7",title:"Vida personal 💜",sub:"Distribuido en el dia",items:[{key:"p1",text:"Ejercicio diario 20-30 min 🏃",sub:"Primero del dia - baja el cortisol",pri:"alta"},{key:"p2",text:"Hogar en micro-bloques 🏠",sub:"20 min manana + cena 17:30",pri:"media"},{key:"p3",text:"Menu semanal y compra (sabado) 🛒",sub:"Un solo bloque",pri:"media"}]},
+  {key:"inmo",icon:"ti-building",color:"#534AB7",bg:"#EEEDFE",title:"Inmobiliaria - Judith Rivera",sub:"Tarde 14-17:30h (manana Lima)",items:[{key:"i1",text:"Contestar correos y mensajes",sub:"Mismo dia - lo mas urgente",pri:"alta"},{key:"i2",text:"Actualizar info y fotos de propiedades",sub:"Base de todo lo demas",pri:"alta"},{key:"i3",text:"Portales inmobiliarios y web",sub:"2-3 veces por semana",pri:"media"},{key:"i4",text:"Promocion en redes sociales",sub:"1 publicacion al dia",pri:"baja"}]},
+  {key:"viajes",icon:"ti-plane",color:"#0F6E56",bg:"#E1F5EE",title:"Namaste Photo Tours + Premium",sub:"Manana 10-11:30h",items:[{key:"v1",text:"Contenido para redes (IG, FB, LinkedIn)",sub:"1 pieza al dia - calidad sobre cantidad",pri:"alta"},{key:"v2",text:"Reels y videos de viajes",sub:"1 por semana",pri:"media"},{key:"v3",text:"Ideas creativas (cuaderno, 15 min)",sub:"Captura - no ejecutes en el momento",pri:"baja"}]},
+  {key:"curso",icon:"ti-school",color:"#854F0B",bg:"#FAEEDA",title:"Formacion",sub:"11:30h y 18:15h",items:[{key:"c1",text:"Trafficker - 2 lecciones al dia",sub:"Terminalo antes de empezar otro",pri:"alta"},{key:"c2",text:"IA aplicada a tus negocios",sub:"Despues de terminar trafficker",pri:"media"}]},
+  {key:"personal",icon:"ti-heart",color:"#D85A30",bg:"#FAECE7",title:"Vida personal",sub:"Distribuido en el dia",items:[{key:"p1",text:"Ejercicio diario 20-30 min",sub:"Primero del dia - baja el cortisol",pri:"alta"},{key:"p2",text:"Hogar en micro-bloques",sub:"20 min manana + cena 17:30",pri:"media"},{key:"p3",text:"Menu semanal y compra (sabado)",sub:"Un solo bloque",pri:"media"}]},
 ];
 var PBG={alta:"#FCEBEB",media:"#FAEEDA",baja:"#EAF3DE"};
 var PLB={alta:"urgente",media:"importante",baja:"cuando puedas"};
@@ -348,13 +348,13 @@ var wg=document.getElementById('wgrid');
 SCH.forEach(function(row){var t=document.createElement('div');t.className='tl';t.innerHTML=row.t+'<div class="zona">'+row.l+'</div>';wg.appendChild(t);row.b.forEach(function(type,di){var btn=document.createElement('button');btn.className='bl '+type;btn.textContent=row.lb[di]||'';if(BTIPS[type]){btn.onclick=function(){document.getElementById('tipbox').innerHTML='<strong>'+row.lb[di]+':</strong> '+BTIPS[type];};}wg.appendChild(btn);});});
 var TDAH_DATA=[
   {icon:"ti-number-1",color:"#534AB7",bg:"#EEEDFE",title:"Una tarea principal al dia",text:"Antes de abrir el email, decide cual es la UNA cosa que haria que el dia valiera la pena. Esa va primero."},
-  {icon:"ti-clock",color:"#D85A30",bg:"#FAECE7",title:"Bloques de 90 min con temporizador ⏱️",text:"Cuando suena, paras aunque estes en racha. Evita el hiperfoco agotador."},
-  {icon:"ti-writing",color:"#854F0B",bg:"#FAEEDA",title:"Cuaderno de capturas para las ideas 📓",text:"Idea para Namaste mientras trabajas en inmobiliaria - escribela y vuelve. Las ideas no se pierden, el foco si."},
+  {icon:"ti-clock",color:"#D85A30",bg:"#FAECE7",title:"Bloques de 90 min con temporizador",text:"Cuando suena, paras aunque estes en racha. Evita el hiperfoco agotador."},
+  {icon:"ti-writing",color:"#854F0B",bg:"#FAEEDA",title:"Cuaderno de capturas para las ideas",text:"Idea para Namaste mientras trabajas en inmobiliaria - escribela y vuelve. Las ideas no se pierden, el foco si."},
   {icon:"ti-ban",color:"#993C1D",bg:"#FAECE7",title:"Una ventana abierta, sin multitarea",text:"Cierra todas las pestanas excepto la tarea activa. El email solo en el bloque de inmobiliaria."},
-  {icon:"ti-run",color:"#0F6E56",bg:"#E1F5EE",title:"Ejercicio antes del ordenador 🏃",text:"20-30 min. Caminar por Llanes cuenta. Reduce cortisol y regula el TDAH."},
-  {icon:"ti-moon",color:"#3C3489",bg:"#EEEDFE",title:"Cierre a las 19:00 - tu decides 🌙",text:"Tu cerebro TDAH no sabe cuando parar. Decides tu. 19:00, ordenador cerrado."},
-  {icon:"ti-heart",color:"#D4537E",bg:"#FBEAF0",title:"Sin culpa por los dias rotos 💜",text:"Un dia malo no cancela la semana. Reenganchas manana - sin drama."},
-  {icon:"ti-chart-bar",color:"#3B6D11",bg:"#EAF3DE",title:"Un curso a la vez 📚",text:"Trafficker completo - IA - siguiente. Asi es como se termina algo de verdad."}
+  {icon:"ti-run",color:"#0F6E56",bg:"#E1F5EE",title:"Ejercicio antes del ordenador",text:"20-30 min. Caminar por Llanes cuenta. Reduce cortisol y regula el TDAH."},
+  {icon:"ti-moon",color:"#3C3489",bg:"#EEEDFE",title:"Cierre a las 19:00 - tu decides",text:"Tu cerebro TDAH no sabe cuando parar. Decides tu. 19:00, ordenador cerrado."},
+  {icon:"ti-heart",color:"#D4537E",bg:"#FBEAF0",title:"Sin culpa por los dias rotos",text:"Un dia malo no cancela la semana. Reenganchas manana - sin drama."},
+  {icon:"ti-chart-bar",color:"#3B6D11",bg:"#EAF3DE",title:"Un curso a la vez",text:"Trafficker completo - IA - siguiente. Asi es como se termina algo de verdad."}
 ];
 var tcc=document.getElementById('tdahcards');
 TDAH_DATA.forEach(function(r){tcc.innerHTML+='<div class="tc"><div class="tci" style="background:'+r.bg+'"><i class="ti '+r.icon+'" style="color:'+r.color+'"></i></div><div><div class="tct">'+r.title+'</div><div class="tcd">'+r.text+'</div></div></div>';});
@@ -404,9 +404,9 @@ function buildPremios(allS){
   var gC=gPct>=70?'#854F0B':gPct>=50?'#993C1D':gPct>=30?'#534AB7':'#0F6E56';
   var gBg=gPct>=70?'#FAEEDA':gPct>=50?'#FAECE7':gPct>=30?'#EEEDFE':'#E1F5EE';
   var gMsg=gPct>=85?'Rendimiento excepcional. Consistencia real durante meses.':gPct>=70?'Gran rendimiento. Tu sistema funciono de verdad.':gPct>=50?'Buen trabajo. Mas de la mitad de los dias, activa.':gPct>=30?'Empezaste y eso ya es ganar.':'Semestre de aprendizaje. Conociste tu sistema.';
-  cont.innerHTML='<div style="background:'+gBg+';border-radius:var(--rl);padding:1.25rem;margin-bottom:1.25rem;text-align:center;border:0.5px solid var(--bd)"><div style="font-size:52px">'+gE+'</div><div style="font-size:18px;font-weight:500;color:'+gC+';margin-top:.5rem">'+gPct+'% de dias laborables activa</div><div style="font-size:12px;color:var(--tx2);margin-top:4px;line-height:1.5">'+gMsg+'</div><div style="display:flex;justify-content:center;gap:1.5rem;margin-top:.875rem;flex-wrap:wrap"><div style="text-align:center"><div style="font-size:22px;font-weight:500;color:var(--tx)">'+tot.done+'</div><div style="font-size:10px;color:var(--tx2)">dias activa</div></div><div style="text-align:center"><div style="font-size:22px;font-weight:500;color:var(--tx)">'+tot.wd+'</div><div style="font-size:10px;color:var(--tx2)">dias laborables</div></div><div style="text-align:center"><div style="font-size:22px;font-weight:500;color:var(--tx)">'+tot.bestStreak+'</div><div style="font-size:10px;color:var(--tx2)">mejor racha 🔥</div></div></div></div>';
+  cont.innerHTML='<div style="background:'+gBg+';border-radius:var(--rl);padding:1.25rem;margin-bottom:1.25rem;text-align:center;border:0.5px solid var(--bd)"><div style="font-size:52px">'+gE+'</div><div style="font-size:18px;font-weight:500;color:'+gC+';margin-top:.5rem">'+gPct+'% de dias laborables activa</div><div style="font-size:12px;color:var(--tx2);margin-top:4px;line-height:1.5">'+gMsg+'</div><div style="display:flex;justify-content:center;gap:1.5rem;margin-top:.875rem;flex-wrap:wrap"><div style="text-align:center"><div style="font-size:22px;font-weight:500;color:var(--tx)">'+tot.done+'</div><div style="font-size:10px;color:var(--tx2)">dias activa</div></div><div style="text-align:center"><div style="font-size:22px;font-weight:500;color:var(--tx)">'+tot.wd+'</div><div style="font-size:10px;color:var(--tx2)">dias laborables</div></div><div style="text-align:center"><div style="font-size:22px;font-weight:500;color:var(--tx)">'+tot.bestStreak+'</div><div style="font-size:10px;color:var(--tx2)">mejor racha</div></div></div></div>';
   cont.innerHTML+='<div style="font-size:13px;font-weight:500;color:var(--tx);margin-bottom:.75rem">🏅 Medallas por area</div>';
-  var areas=[{lbl:'Inmobiliaria 🏢',color:'#534AB7',bg:'#EEEDFE',val:tot.inmo},{lbl:'Namaste ✈️',color:'#0F6E56',bg:'#E1F5EE',val:tot.namaste},{lbl:'Trafficker 📚',color:'#854F0B',bg:'#FAEEDA',val:tot.curso},{lbl:'Ejercicio 🏃',color:'#D85A30',bg:'#FAECE7',val:tot.ejercicio}];
+  var areas=[{lbl:'Inmobiliaria',color:'#534AB7',bg:'#EEEDFE',val:tot.inmo},{lbl:'Namaste',color:'#0F6E56',bg:'#E1F5EE',val:tot.namaste},{lbl:'Trafficker',color:'#854F0B',bg:'#FAEEDA',val:tot.curso},{lbl:'Ejercicio',color:'#D85A30',bg:'#FAECE7',val:tot.ejercicio}];
   var ag='<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:8px;margin-bottom:1.25rem">';
   areas.forEach(function(a){var pct=tot.wd>0?Math.round(a.val/tot.wd*100):0;var mE=pct>=80?"🥇":pct>=60?"🥈":pct>=40?"🥉":pct>=20?"⭐":"🌱";ag+='<div style="background:#fff;border-radius:var(--rl);padding:.875rem 1rem;border:0.5px solid var(--bd);text-align:center;box-shadow:0 1px 4px rgba(0,0,0,.05)"><div style="font-size:14px;font-weight:500;color:var(--tx);margin-bottom:4px">'+a.lbl+'</div><div style="font-size:28px">'+mE+'</div><div style="font-size:20px;font-weight:500;color:'+a.color+';margin-top:3px">'+pct+'%</div><div style="font-size:10px;color:var(--tx3)">'+a.val+' de '+tot.wd+' dias</div><div style="height:4px;background:var(--bg3);border-radius:5px;margin-top:8px;overflow:hidden"><div style="height:100%;width:'+pct+'%;background:'+a.color+';border-radius:5px"></div></div></div>';});
   ag+='</div>';cont.innerHTML+=ag;
